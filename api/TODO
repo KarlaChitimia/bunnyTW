@@ -1,0 +1,9 @@
+- get movies by user id
+- get movies by genre id
+- get movies by released in the last year
+- get movie by id
+- login (email / username, password), return jwt token §
+- register (name, surname, email, username, password) §
+- add prop to movie in db - numar de inchirieri (pt trending section) §
+- (*) add prop to movie in db - imdb rating (pt top filme section)
+- (*) add prop to movie in db - age rating (pt parental controls)

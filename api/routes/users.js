@@ -3,7 +3,7 @@ const User = require("../models/User");
 const CryptoJS = require("crypto-js");
 const verify = require("../verifyToken");
 
-//UPDATE
+//UPDATE -> working on
 
 router.put("/:id", verify, async (req, res) =>{
 

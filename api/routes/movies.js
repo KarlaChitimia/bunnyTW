@@ -1,7 +1,6 @@
 const router = require("express").Router();
 const Movie = require("../models/Movie");
 
-
 //AddMovie
 router.post("/addMovie", async (req, res) => {
     const newMovie = Movie({
@@ -23,5 +22,13 @@ router.post("/addMovie", async (req, res) => {
         res.status(500).json(err);
     }
 })
+
+//get movies by user id
+
+//get movies by genre id
+
+//get movies by released in the last year
+
+//get movie by id
 
 module.exports = router; 
