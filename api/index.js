@@ -14,8 +14,15 @@ mongoose.connect(process.env.MONGO_URL)
 
 app.use(express.json());
 
+
 app.use("", authRoute);
-app.use("/users", usersRoute);
+
+//app.use("", usersRoute);
+app.use("", movieRoutes);
+app.use("/movies", movieRoutes);
+
+
+
 
 app.listen(8800, () =>{
     console.log('http://localhost:8800/')

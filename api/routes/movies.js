@@ -24,10 +24,32 @@ router.post("/addMovie", async (req, res) => {
 })
 
 //get movies by user id
+router.get("/byuserid/:id", async (req, res) =>{
+    const id = req.params.id;
 
-//get movies by genre id
+})
+
+//get movies by genre 
+router.get("/bygenre/:genre", async(req, res) =>{
+    
+    
+    Movie.find({genre: req.params.genre}).limit(15).exec(function(err, docs) {
+        res.status(200).json(docs)
+      });
+
+})
 
 //get movies by released in the last year
+router.get("/thisyear", async(req, res) =>{
+    
+    const currentTime = new Date();
+    const year = currentTime.getFullYear();
+
+    Movie.find({releaseDate: year}).limit(15).exec(function(err, docs) {
+        res.status(200).json(docs)
+      });
+
+})
 
 //get movie by id
 
