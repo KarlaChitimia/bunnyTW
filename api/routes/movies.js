@@ -25,14 +25,18 @@ router.post("/addMovie", async (req, res) => {
 
 //get movies by user id
 router.get("/byuserid/:id", async (req, res) =>{
-    const id = req.params.id;
+    Movie.findOne({genre: req.params.id}).limit(15).exec(function(err, docs) {
+        res.status(200).json(docs)
+      });
 
 })
 
 //get movies by genre 
 router.get("/bygenre/:genre", async(req, res) =>{
     
-    
+
+    //ID, title, duration, image
+
     Movie.find({genre: req.params.genre}).limit(15).exec(function(err, docs) {
         res.status(200).json(docs)
       });
@@ -52,5 +56,10 @@ router.get("/thisyear", async(req, res) =>{
 })
 
 //get movie by id
+router.get("/:id", async (req, res) =>{
+    Movie.findOne({genre: req.params.id}).limit(15).exec(function(err, docs) {
+        res.status(200).json(docs)
+      });
 
+})
 module.exports = router; 

@@ -1,11 +1,18 @@
-- get movies by user id (recommended for you)
-- get movies by genre id 
-- get movies by released in the last year
+TO DO:
+- get movies by user id 
 - get movie by id 
+- rent model schema
+
+IN PROGRESS:
+
+
+DONE:
+- get movies by genre id §
+- get movies by released in the last year §
 - login (email / username, password), return jwt token §
 - register (name, surname, email, username, password) §
 - add prop to movie in db - numar de inchirieri (pt trending section) §
 
-
+NICE TO HAVE:
 - (*) add prop to movie in db - imdb rating (pt top filme section)
 - (*) add prop to movie in db - age rating (pt parental controls)

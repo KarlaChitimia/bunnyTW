@@ -19,6 +19,7 @@ app.use("", authRoute);
 
 //app.use("", usersRoute);
 app.use("", movieRoutes);
+
 app.use("/movies", movieRoutes);
 
 
